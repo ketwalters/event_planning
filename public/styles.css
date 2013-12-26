@@ -1,0 +1,18 @@
+h2 {
+  color :#FFFFFF;
+  text-align: center;
+  font-size: 50px;
+  font-family: arial,sans-serif;
+  font-family: 'Varela Round', serif;
+  text-shadow: 4px 4px 4px #aaa;
+}
+
+body {
+  background-color:#FF9966;
+}
+
+img { 
+	position: relative; 
+	top: -80px;
+} 
+

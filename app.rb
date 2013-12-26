@@ -1,13 +1,11 @@
-require 'sinatra/base'
+#require 'sinatra/base'
 require './lib/compliment'
 
 require 'bundler'
 Bundler.require
 
-
-
 module Compliment
-class App < Sinatra::Base
+class App < Sinatra::Application
 
 	get '/' do
 		@random = EmergencyCompliment.new

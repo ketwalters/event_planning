@@ -1,21 +1,26 @@
-#require 'sinatra/base'
-require './lib/compliment'
-
 require 'bundler'
 Bundler.require
 
-module Compliment
 class App < Sinatra::Application
 
 	get '/' do
-		@random = EmergencyCompliment.new
-		erb :compliment
+		erb :index 
 	end
 
-	get '/compliments' do
-		@random = EmergencyCompliment.new
-		erb :compliment
+	get '/weddings.erb' do
+		erb :weddings
 	end
 
-end
+	get '/birthdays.erb' do
+		erb :birthdays
+	end
+
+	get '/anniversaries.erb' do
+		erb :anniversaries
+	end
+
+	get '/about.erb' do
+		erb :about
+	end
+
 end

@@ -1,6 +1,10 @@
 require 'bundler'
 Bundler.require
 
+require "sinatra/activerecord"
+
+set :database, "sqlite3:///spacecats.db"
+
 class App < Sinatra::Application
 
 	get '/' do
@@ -27,5 +31,12 @@ class App < Sinatra::Application
 		erb :contact
 	end
 
+	get '/:form_type' do
+		erb params[:form_type].to_sym
+	end
+
+	post '/:form_type' do
+		erb :results
+	end
 
 end

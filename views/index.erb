@@ -105,25 +105,33 @@ nav ul ul li {
 
 </style>
 
-<header>
-	<div id="name">Char Events</div>
-</header>
-<div id="container">
-	<nav>
-		<ul class="bar">
-			<li id="about"><a href="about.erb">About</a></li>
-			<li><a href="#">Events</a>
-				<ul>
-					<li><a href="weddings.erb">Weddings</a></li>
-					<li><a href="birthdays.erb">Birthdays</a></li>
-					<li><a href="anniversaries.erb">Anniversaries</a></li>
+<DOCTYPE html>
+<html>
+	<head>
+		<title>Char Events</title>
+	</head>
+	<body>
+		<header>
+			<div id="name">Char Events</div>
+		</header>
+		<div id="container">
+			<nav>
+				<ul class="bar">
+					<li id="about"><a href="about.erb">About</a></li>
+					<li><a href="#">Events</a>
+						<ul>
+							<li><a href="weddings.erb">Weddings</a></li>
+							<li><a href="birthdays.erb">Birthdays</a></li>
+							<li><a href="anniversaries.erb">Anniversaries</a></li>
+						</ul>
+					</li>
+					<li id="contact"><a href="contact.erb">Contact</a></li>
 				</ul>
-			</li>
-			<li id="contact"><a href="#">Contact</a></li>
-		</ul>
-	</nav>
-	<div id="cycler">
-		<img class="active" src="../images/ambrose_black_wedding.jpg">
-		<img src="../images/wedding.jpg">	
-	</div>	
-</div>
+			</nav>
+			<div id="cycler">
+				<img class="active" src="../images/ambrose_black_wedding.jpg">
+				<img src="../images/wedding.jpg">	
+			</div>	
+		</div>
+	</body>
+</html>

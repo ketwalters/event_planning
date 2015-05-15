@@ -23,4 +23,9 @@ class App < Sinatra::Application
 		erb :about
 	end
 
+	get '/contact.erb' do
+		erb :contact
+	end
+
+
 end

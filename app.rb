@@ -1,11 +1,21 @@
 require 'bundler'
 Bundler.require
 
+require "sinatra/base"
 require "sinatra/activerecord"
 
-set :database, "sqlite3:///spacecats.db"
+set :database, "sqlite3:///events.db"
 
-class App < Sinatra::Application
+class App < ActiveRecord::Base
+
+	validates_uniqueness_of :first
+    validates_presence_of :first
+
+    validates_uniqueness_of :last
+    validates_presence_of :last
+
+    validates_uniqueness_of :email
+    validates_presence_of :email
 
 	get '/' do
 		erb :index 

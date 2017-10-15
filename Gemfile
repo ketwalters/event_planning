@@ -6,7 +6,7 @@ gem "sinatra-activerecord"
 gem "rake"
 gem 'haml'
 
-group :development, do :test do
+group :development, :test do
   gem 'sqlite3'
   gem "shotgun"
   gem "tux"

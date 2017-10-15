@@ -1,52 +1,53 @@
 require 'bundler'
 Bundler.require
+require './lib/contact'
 
 require "sinatra/base"
-require "sinatra/activerecord"
-
-set :database, "sqlite3:///events.db"
-
-class App < ActiveRecord::Base
-
-	validates_uniqueness_of :first
-    validates_presence_of :first
-
-    validates_uniqueness_of :last
-    validates_presence_of :last
-
-    validates_uniqueness_of :email
-    validates_presence_of :email
 
 	get '/' do
 		erb :index 
 	end
 
-	get '/weddings.erb' do
+	get '/new' do
+		@contact = Contact.new
+		erb :new
+	end
+
+	post '/new' do
+		@contact = Contact.new(params[:contact])
+		if @contact.save
+      redirect '/results' 
+		else
+      "Sorry there was an error"
+		end
+	end
+
+	get '/weddings' do
 		erb :weddings
 	end
 
-	get '/birthdays.erb' do
+	get '/birthdays' do
 		erb :birthdays
 	end
 
-	get '/anniversaries.erb' do
+	get '/anniversaries' do
 		erb :anniversaries
 	end
 
-	get '/about.erb' do
+	get '/about' do
 		erb :about
 	end
 
-	get '/contact.erb' do
-		erb :contact
-	end
+  get '/results' do
+    erb :results
+  end
 
-	get '/:form_type' do
-		erb params[:form_type].to_sym
-	end
+  get '/contacts' do
+  	@contacts = Contact.all
+  	erb:show
+  end
 
-	post '/:form_type' do
-		erb :results
-	end
 
-end
+
+
+

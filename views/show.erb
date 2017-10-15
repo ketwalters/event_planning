@@ -1,0 +1,15 @@
+<h1>All Contacts</h1>
+
+<div id="contact">
+  <% @contacts.each do |contact| %>
+    <h3> <%= contact.first %> </h3>
+    <h3> <%= contact.last %> </h3>
+    <h3> <%= contact.street %> </h3>
+    <h3> <%= contact.city %> </h3>
+    <h3> <%= contact.state %> </h3>
+    <h3> <%= contact.zip %> </h3>
+    <h3> <%= contact.email %> </h3>
+    <h3> <%= contact.phone %> </h3>
+  <% end %>
+</div>
+

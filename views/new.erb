@@ -1,0 +1,57 @@
+<style>
+body {
+	background-color: #EED2EE;
+}
+
+#contact-head {
+	font-family: 'Poiret One', cursive;
+	font-size: 20px;
+	color: white;
+}
+
+label {
+	font-family: 'Poiret One', cursive;
+	color: white
+}
+
+input::-webkit-input-placeholder {
+    font-family: 'Poiret One', cursive;
+    font-size: 14px;
+}
+
+input {
+	height: 20px;
+	width: 150px;
+}
+
+#contact-head {
+	font-size: 40px;
+}
+
+</style>
+
+<DOCTYPE html>
+<html>
+	<head>
+      <link rel="stylesheet" href="public/styles.css" type="text/css">
+	</head>
+	<body id="contact">
+		<h1 id="contact-head">Contact</h1>
+		<form action="/new" method="POST">
+			<div id="contact-box">
+				<input id="POST-first" type="text" name="first" placeholder="First Name" value="<%= @contact.first %>"/>
+
+				<input id="POST-last" type="text" name="last" placeholder="Last Name" value="<%= @contact.last %>"/>
+
+				<br>
+
+				<input id="POST-email" type="text" name="email" placeholder="Email"value="<%= @contact.email %>"/>
+
+				<input id="POST-phone" type="text" name="phone" placeholder="Phone" value="<%= @contact.phone %>"/>
+
+				<br>
+		  </div>
+			<input type="submit">
+		</form>	
+	</body>
+</html>

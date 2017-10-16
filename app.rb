@@ -1,8 +1,8 @@
 require 'bundler'
 Bundler.require
 require './lib/contact'
-
-require "sinatra/base"
+require 'sinatra/base'
+require './environments'
 
 	get '/' do
 		erb :index 

@@ -1,4 +1,4 @@
-set :database, "sqlite3:///events.db"
+#set :database, "sqlite3:///events.db"
 
 class Contact < ActiveRecord::Base
 

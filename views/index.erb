@@ -77,14 +77,52 @@ nav ul ul li {
 #cycler img {
 	position:absolute;
 	z-index:1; 
-	width: 850px;
-	height: 500px;
+	width: 800px;
+	height: 450px;
 	top: -30px;
+	left: 4%;
 }
+
 #cycler img.active {
 	z-index:3
-	width: 850px;
-	height: 500px;
+	width: 800px;
+	height: 450px;
+}
+
+footer {
+	display: block;
+	position: absolute;
+	top: 115%;
+	width: 100%;
+	border-top: 2px solid #D3D3D3;
+	height: 175px;
+	left: 0%;
+	background-color: #EED2EE;
+}
+
+.fa {
+  padding: 20px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: white;
+  margin-top: 80px;
+}
+
+.social {
+	margin-left: 510px;
+}
+
+.info {
+	display: inline-block;
+	color: white;
+	font-family: 'Poiret One', cursive;
+	font-size: 25px;
+	margin: 0px 50px 0px 50px;
+	position: absolute;
+	top: 28%;
+	left: 37%;
 }
 
 @media (max-width: 500px) {
@@ -101,12 +139,14 @@ nav ul ul li {
         display: block;
       }
 }
+
 </style>
 
 <DOCTYPE html>
 <html>
 	<head>
 		<title>Char Events</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<header>
@@ -127,9 +167,20 @@ nav ul ul li {
 				</ul>
 			</nav>
 			<div id="cycler">
-				<img class="active" src="../images/ambrose_black_wedding.jpg">
-				<img src="../images/wedding.jpg">	
-			</div>	
+				<img class="active" src="../images/rings.jpeg">
+				<img src="../images/boxes.jpg">
+			</div>
 		</div>
+	 <footer>
+	 	<div class="info">
+	 		<span id="phone">xxx.xxx.xxx</span>
+	 		<span id="email">test@gmail.com</span>
+	 	</div>
+	 	<div class="social">
+	 		<a href="#" class="fa fa-instagram"></a>
+	 	  <a href="#" class="fa fa-pinterest"></a>
+	 	  <a href="#" class="fa fa-twitter"></a>
+	  </div>
+	 </footer>	
 	</body>
 </html>
